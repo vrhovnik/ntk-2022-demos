@@ -4,10 +4,10 @@ Demos for conference [NTK 2022](https://ntk.si/), September 2022 in Portorož, S
 talking about how to write your own kubectl with Csharp, explaining possible options and what is already done in Kubectl
 world to take advantage on integrating your workflow with Azure Kubernetes Service as main tech provider behind the scenes.
 
-Slides are available [here](https://webeudatastorage.blob.core.windows.net/web/Write-your-own-kubectl-with-csharp.pdf), demo explanation below.
+Slides are available [here](https://webeudatastorage.blob.core.windows.net/web/Programmatic-access-to-AKS.pdf), demo explanation below.
 
 <!-- TOC -->
-* [NTK 2022 conference - demos for session about Programmatic access to AKS](#NTK 2022 conference - demos for session about Programmatic access to AKS)
+* [NTK 2022 conference - demos for session about Programmatic access to AKS](#ntk-2022-conference---demos-for-session-about-programmatic-access-to-aks)
   * [Demo structure](#demo-structure)
     * [Csharp project structure](#csharp-project-structure)
     * [IS.REST project](#isrest-project)
