@@ -4,20 +4,20 @@ metadata:
   name: ttaweb
   labels:
     app: tta
-    conf: InfobipShift
+    conf: ntk
     type: web
 spec:
   replicas: 2
   selector:
     matchLabels:
       app: tta
-      conf: InfobipShift
+      conf: ntk
       type: web
   template:
     metadata:
       labels:
         app: tta
-        conf: InfobipShift
+        conf: ntk
         type: web
     spec:
       containers:
@@ -35,7 +35,7 @@ metadata:
   name: ttaweb-service
   labels:
     app: tta
-    conf: InfobipShift
+    conf: ntk
     type: svc
 spec:
   type: LoadBalancer
@@ -43,5 +43,5 @@ spec:
     - port: 80
   selector:
     app: tta
-    conf: InfobipShift
+    conf: ntk
     type: web

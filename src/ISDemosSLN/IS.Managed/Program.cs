@@ -4,7 +4,7 @@ using k8s;
 using Spectre.Console;
 
 AnsiConsole.MarkupLine(
-    $"[link=https://github.com/vrhovnik/infobip-shift-2022-demos]Demo for working with Managed C# Kubernetes Api[/]!");
+    $"[link=https://github.com/vrhovnik/ntk-2022-demos]Demo for working with Managed C# Kubernetes Api[/]!");
 AnsiConsole.WriteLine("Loading from:");
 AnsiConsole.Write(new TextPath(@"C:\Users\bovrhovn\.kube\config")
     .RootStyle(new Style(foreground: Color.Red))
@@ -23,7 +23,7 @@ await namespaceOps.ListAllNamespacesAsync();
 
 var nsName = AnsiConsole.Ask<string>("What [green]namespace[/] would you like to create?");
 await namespaceOps.CreateNamespaceAsync(nsName,
-    new Dictionary<string, string> { { "app", "cli" }, { "conf", "InfobipShift" }, { "type", "ns" } });
+    new Dictionary<string, string> { { "app", "cli" }, { "conf", "ntk" }, { "type", "ns" } });
 
 await namespaceOps.ListAllNamespacesAsync();
 
@@ -48,7 +48,7 @@ var podImage = AnsiConsole.Ask<string>("What [green]image[/] would you like to u
 var podName = new Faker().Hacker.Abbreviation().ToLowerInvariant();
 
 await workloadOps.CreatePodAsync(podName, podImage,
-    new Dictionary<string, string> { { "app", "cli" }, { "conf", "InfobipShift" }, { "type", "pods" } },
+    new Dictionary<string, string> { { "app", "cli" }, { "conf", "ntk" }, { "type", "pods" } },
     namespaceToCheckPods);
 
 await workloadOps.OutputPodsAsync(namespaceToCheckPods);
@@ -68,7 +68,7 @@ HorizontalRule("05 - exec into POD");
 
 var podNameToExecInto = "simple-web-app";
 await workloadOps.CreatePodAsync(podNameToExecInto, "csacoreimages.azurecr.io/tta/web:1.0",
-    new Dictionary<string, string> { { "app", "cli" }, { "conf", "InfobipShift" }, { "type", "pods" } });
+    new Dictionary<string, string> { { "app", "cli" }, { "conf", "ntk" }, { "type", "pods" } });
 
 var podToExecInto = await workloadOps.GetV1PodAsync(podNameToExecInto);
 AnsiConsole.WriteLine($"Read pod {podToExecInto.Metadata.Name}");
